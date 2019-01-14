@@ -77,7 +77,9 @@ CKeyboard::CKeyboard(const std::string &p_inputText):
     }
     // Create footer
     m_footer = SDL_utils::createImage(SCREEN_WIDTH, H_FOOTER, SDL_MapRGB(Globals::g_screen->format, COLOR_BORDER));
-#if defined(PLATFORM_DINGOO)
+#if defined(PLATFORM_GAMESHELL)
+    SDL_utils::applyText(SCREEN_WIDTH >> 1, 1, m_footer, m_font, "A-Input   B-Cancel   START-OK   -/+-Change   Y-Backspace   X-Space", Globals::g_colorTextTitle, SDL_utils::T_TEXT_ALIGN_CENTER);
+#elif defined(PLATFORM_DINGOO)
     SDL_utils::applyText(SCREEN_WIDTH >> 1, 1, m_footer, m_font, "A-Input   B-Cancel   START-OK   L/R-Change   Y-Backspace   X-Space", Globals::g_colorTextTitle, SDL_utils::T_TEXT_ALIGN_CENTER);
 #elif defined(PLATFORM_GCW0)
     SDL_utils::applyText(SCREEN_WIDTH >> 1, 1, m_footer, m_font, "A-Input   B-Cancel   START-OK   L/R-Change   X-Backspace   Y-Space", Globals::g_colorTextTitle, SDL_utils::T_TEXT_ALIGN_CENTER);
