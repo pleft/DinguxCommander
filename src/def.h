@@ -37,7 +37,7 @@
 #define MYKEY_RIGHT         SDLK_RIGHT      // Right
 #define MYKEY_DOWN          SDLK_DOWN       // Down
 #define MYKEY_LEFT          SDLK_LEFT       // Left
-#define MYKEY_SYSTEM        SDLK_i          // Y
+#define MYKEY_SYSTEM        SDLK_ESCAPE     // MENU
 #define MYKEY_PAGEUP        SDLK_KP_MINUS   // Shift-Select
 #define MYKEY_PAGEDOWN      SDLK_KP_PLUS    // Shift-Start
 #define MYKEY_OPEN          SDLK_j            // A
@@ -45,6 +45,7 @@
 #define MYKEY_OPERATION     SDLK_u            // X
 #define MYKEY_SELECT        SDLK_SPACE        // SELECT
 #define MYKEY_TRANSFER      SDLK_RETURN       // START
+#define MYKEY_BACKSPACE     SDLK_i            // Y
 #define PATH_DEFAULT        "/"
 #define FILE_SYSTEM         "/dev/root"
 #elif defined(PLATFORM_DINGOO)

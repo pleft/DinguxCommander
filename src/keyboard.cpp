@@ -220,7 +220,11 @@ const bool CKeyboard::keyPress(const SDL_Event &p_event)
         case MYKEY_RIGHT:
             l_ret = moveCursorRight(true);
             break;
+    #if defined(PLATFORM_GAMESHELL)
+        case MYKEY_BACKSPACE:
+    #else
         case MYKEY_SYSTEM:
+        #endif
             // Y => Backspace
             l_ret = backspace();
             break;
